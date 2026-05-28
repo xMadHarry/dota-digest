@@ -8,7 +8,7 @@
   :root{
     --bg:#0e1116; --card:#161b22; --card2:#1b2230; --ink:#e6edf3;
     --muted:#9aa7b4; --line:#283041; --accent:#f2a33c; --accent2:#5aa0ff;
-    --good:#3fb950; --warn:#e3b341;
+    --good:#3fb950; --warn:#e3b341; --navi:#ffd400;
   }
   *{box-sizing:border-box}
   body{
@@ -27,6 +27,18 @@
     background:var(--card2); border:1px solid var(--line); border-radius:8px;
     font-size:.9rem; color:var(--ink)
   }
+  /* NAVI highlight box */
+  .navi-box{
+    margin:16px 0; padding:14px 16px; border-radius:12px;
+    background:linear-gradient(180deg,#221d00,#161b22);
+    border:1px solid var(--navi); border-left:5px solid var(--navi);
+  }
+  .navi-box .navi-h{
+    display:flex; align-items:center; gap:8px; font-weight:800;
+    color:var(--navi); letter-spacing:.4px; margin-bottom:4px; font-size:1.05rem;
+  }
+  .navi-box p{margin:4px 0}
+  .navi-box .sub{color:var(--muted); font-size:.85rem}
   section{
     background:var(--card); border:1px solid var(--line); border-radius:12px;
     padding:16px 18px; margin:16px 0;
@@ -80,24 +92,48 @@
     <div class="window">📆 Вікно: <b>28.05.2026 00:39</b> → <b>29.05.2026 00:39</b> (Europe/Berlin, CEST)</div>
   </header>
 
-  <section>
-    <h2>🎮 Гра / патч</h2>
-    <p class="none">Без оновлень за останні 24 год.</p>
-    <p>Актуальна версія — <b>7.41c</b> (вийшла 6 травня 2026). Нових ігрових патчів чи хотфіксів у вікні не зафіксовано.</p>
-    <p class="src">Джерела:
-      <a href="https://www.dota2.com/patches">dota2.com/patches</a> ·
-      <a href="https://steamdb.info/patchnotes/23117868/">SteamDB 7.41c</a> ·
-      <a href="https://liquipedia.net/dota2/Portal:Patches">Liquipedia Patches</a>
-    </p>
-  </section>
+  <div class="navi-box">
+    <div class="navi-h">🇺🇦 NAVI сьогодні</div>
+    <p><b>На жаль, не грають.</b> Natus Vincere немає в сітці активного T1-івенту (BLAST Slam VII).</p>
+    <p class="sub">⚠️ Трапляються неперевірені згадки про матчі NAVI у дрібніших турнірах 29.05 —
+      актуальний розклад звіряйте на <a href="https://navi.gg/en/matches/dota-2">navi.gg</a>.</p>
+  </div>
 
   <section>
-    <h2>🔁 Ростери T1</h2>
-    <p class="none">Підтверджених ростерних змін серед топ-команд за останні 24 год не зафіксовано.</p>
-    <p>Головна кадрова тема дня — чутки навколо <b>Tundra Esports</b> (див. розділ «Чутки» нижче).</p>
-    <p class="src">Джерела:
-      <a href="https://escharts.com/transfers?game=dota2">Esports Charts — Transfers</a> ·
-      <a href="https://hawk.live/tags/dota-2-news">Hawk.live</a>
+    <h2>📅 Матчі сьогодні (T1) <span class="tag">29.05, Europe/Berlin</span></h2>
+    <p>BLAST Slam VII, груповий етап (Bo1). Стрім: <a href="https://www.twitch.tv/blastdota">twitch.tv/blastdota</a>.</p>
+
+    <div class="match">
+      <span class="time">10:00 CEST</span>
+      <span class="teams">Team Falcons vs Team Liquid</span>
+      <span class="fmt">· BLAST Slam VII · Bo1</span>
+    </div>
+    <div class="match">
+      <span class="time">10:00 CEST</span>
+      <span class="teams">Tundra Esports vs BetBoom Team</span>
+      <span class="fmt">· BLAST Slam VII · Bo1</span>
+    </div>
+    <div class="match">
+      <span class="time">11:10 CEST</span>
+      <span class="teams">Team Spirit vs PARIVISION</span>
+      <span class="fmt">· BLAST Slam VII · Bo1</span>
+    </div>
+    <div class="match">
+      <span class="time">11:10 CEST</span>
+      <span class="teams">Team Yandex vs GLYPH</span>
+      <span class="fmt">· BLAST Slam VII · Bo1</span>
+    </div>
+    <div class="match">
+      <span class="time">~12:20 CEST</span>
+      <span class="teams">Xtreme Gaming vs LGD Gaming</span>
+      <span class="fmt">· BLAST Slam VII · Bo1</span>
+    </div>
+
+    <p class="note">Груповий етап щільний — упродовж дня заплановано й інші тури.
+    Повний та оновлений розклад дивіться за посиланнями.</p>
+    <p class="src">
+      <a href="https://liquipedia.net/dota2/BLAST/Slam/7/Group_Stage">Liquipedia — розклад</a> ·
+      <a href="https://hawk.live/posts/blast-slam-vii-schedule-standings-results">Hawk.live</a>
     </p>
   </section>
 
@@ -143,41 +179,17 @@
   </section>
 
   <section>
-    <h2>📅 Матчі сьогодні (T1) <span class="tag">29.05, Europe/Berlin</span></h2>
-    <p>BLAST Slam VII, груповий етап (Bo1). Стрім: <a href="https://www.twitch.tv/blastdota">twitch.tv/blastdota</a>.</p>
-
-    <div class="match">
-      <span class="time">10:00 CEST</span>
-      <span class="teams">Team Falcons vs Team Liquid</span>
-      <span class="fmt">· BLAST Slam VII · Bo1</span>
-    </div>
-    <div class="match">
-      <span class="time">10:00 CEST</span>
-      <span class="teams">Tundra Esports vs BetBoom Team</span>
-      <span class="fmt">· BLAST Slam VII · Bo1</span>
-    </div>
-    <div class="match">
-      <span class="time">11:10 CEST</span>
-      <span class="teams">Team Spirit vs PARIVISION</span>
-      <span class="fmt">· BLAST Slam VII · Bo1</span>
-    </div>
-    <div class="match">
-      <span class="time">11:10 CEST</span>
-      <span class="teams">Team Yandex vs GLYPH</span>
-      <span class="fmt">· BLAST Slam VII · Bo1</span>
-    </div>
-    <div class="match">
-      <span class="time">~12:20 CEST</span>
-      <span class="teams">Xtreme Gaming vs LGD Gaming</span>
-      <span class="fmt">· BLAST Slam VII · Bo1</span>
-    </div>
-
-    <p class="note">Груповий етап щільний — упродовж дня заплановано й інші тури.
-    Повний та оновлений розклад дивіться за посиланнями.</p>
-    <p class="src">
-      <a href="https://liquipedia.net/dota2/BLAST/Slam/7/Group_Stage">Liquipedia — розклад</a> ·
-      <a href="https://hawk.live/posts/blast-slam-vii-schedule-standings-results">Hawk.live</a>
-    </p>
+    <h2>🔎 Reddit r/DotA2</h2>
+    <div class="note">ℹ️ Цього запуску прямий доступ до r/DotA2 був недоступний (фетч заблоковано).
+    Нижче — головні теми дня за непрямими даними; стрічку звіряйте за
+    <a href="https://www.reddit.com/r/DotA2/">посиланням</a>.</div>
+    <ul>
+      <li>Реакції на прямі інвайти TI 2026 і скорочення поля з 8 до 7 — помітна дискусія
+        навколо відсутності <b>Team Spirit</b> серед прямих запрошених.</li>
+      <li>Обговорення об'єднання Західної та Східної Європи в єдиний кваліфаєр.</li>
+      <li>Матчі та апсети групового етапу <b>BLAST Slam VII</b>.</li>
+      <li>Чутки про можливий відхід <b>Tundra</b> / перехід складу під 1win.</li>
+    </ul>
   </section>
 
   <section>
@@ -196,17 +208,24 @@
   </section>
 
   <section>
-    <h2>🔎 Reddit r/DotA2</h2>
-    <div class="note">ℹ️ Цього запуску прямий доступ до r/DotA2 був недоступний (фетч заблоковано).
-    Нижче — головні теми дня за непрямими даними; стрічку звіряйте за
-    <a href="https://www.reddit.com/r/DotA2/">посиланням</a>.</div>
-    <ul>
-      <li>Реакції на прямі інвайти TI 2026 і скорочення поля з 8 до 7 — помітна дискусія
-        навколо відсутності <b>Team Spirit</b> серед прямих запрошених.</li>
-      <li>Обговорення об'єднання Західної та Східної Європи в єдиний кваліфаєр.</li>
-      <li>Матчі та апсети групового етапу <b>BLAST Slam VII</b>.</li>
-      <li>Чутки про можливий відхід <b>Tundra</b> / перехід складу під 1win.</li>
-    </ul>
+    <h2>🔁 Ростери T1</h2>
+    <p class="none">Підтверджених ростерних змін серед топ-команд за останні 24 год не зафіксовано.</p>
+    <p>Головна кадрова тема дня — чутки навколо <b>Tundra Esports</b> (див. розділ «Чутки» вище).</p>
+    <p class="src">Джерела:
+      <a href="https://escharts.com/transfers?game=dota2">Esports Charts — Transfers</a> ·
+      <a href="https://hawk.live/tags/dota-2-news">Hawk.live</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>🎮 Гра / патч</h2>
+    <p class="none">Без оновлень за останні 24 год.</p>
+    <p>Актуальна версія — <b>7.41c</b> (вийшла 6 травня 2026). Нових ігрових патчів чи хотфіксів у вікні не зафіксовано.</p>
+    <p class="src">Джерела:
+      <a href="https://www.dota2.com/patches">dota2.com/patches</a> ·
+      <a href="https://steamdb.info/patchnotes/23117868/">SteamDB 7.41c</a> ·
+      <a href="https://liquipedia.net/dota2/Portal:Patches">Liquipedia Patches</a>
+    </p>
   </section>
 
   <footer>

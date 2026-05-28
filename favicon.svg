@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0e1116" stroke="#c2281d" stroke-width="3"/>
+  <!-- стилізована емблема в дусі Dota 2 / Aegis -->
+  <path d="M32 11 L50 18 V32 C50 43 42 50 32 54 C22 50 14 43 14 32 V18 Z"
+        fill="none" stroke="#e23b2e" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M32 20 L41 24 V32 C41 39 37 43 32 46 C27 43 23 39 23 32 V24 Z"
+        fill="#c2281d"/>
+  <path d="M32 25 V41 M27 31 L37 31" stroke="#0e1116" stroke-width="3" stroke-linecap="round"/>
+</svg>
